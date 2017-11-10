@@ -78,12 +78,17 @@
 }
 
 .station_li_right {
-    padding: .15rem 0 0 .2rem;
+    width: 60%;
+    padding: .3rem 0;
     line-height: .5rem;
+    text-align: center;
 }
 
 .station_name {
+
     color: #5ec0dc;
+    vertical-align: middle;
+    font-size: .35rem;
 }
 
 .state_ul {

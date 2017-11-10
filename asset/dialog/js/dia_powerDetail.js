@@ -1,7 +1,6 @@
 new Vue({
   el: '#dia_powerDetail',
   data: {
-
     stationId:vlm.parseUrlPara(location.href).stationId.toLowerCase(),
     fdStationName: '',  //项目名称
     powerDay: '--', //今日发电
@@ -34,7 +33,7 @@ new Vue({
       this.fdCity = this.getSearchString('fdCity')
     },
     //获取电站整体信息
-    getPsDetailInfo1: function () {
+    /*getPsDetailInfo1: function () {
       var _this = this;
       $.ajax({
         url:vlm.serverAddr+'stationInfo/queryPsDataById',
@@ -66,7 +65,7 @@ new Vue({
         },
         error:function(){},
       });
-    },
+    },*/
 
     //获取厂房信息
     getDevrelation:function () {
@@ -94,7 +93,6 @@ new Vue({
         },
         error:function(){},
       });
-
     },
 
     //发电趋势show
@@ -105,7 +103,7 @@ new Vue({
     },
 
     //发电趋势首次加载或者点击后发送请求
-    getResultTrends: function () {
+    /*getResultTrends: function () {
       var _this = this;
 
       $.ajax({
@@ -124,10 +122,10 @@ new Vue({
         error:function(){},
       });
 
-    },
+    },*/
 
     //处理日发电数据
-    dealPowerData_day: function (list) {
+    /*dealPowerData_day: function (list) {
       var _this = this;
         var glData = [], actualData = [], dateDate = []; //功率、发电量、日期区间
         for (var i = 0; i < list.length; i++) {
@@ -141,10 +139,10 @@ new Vue({
         }
         var unit = 'kWh', glUnit = 'kW';//发电量单位 功率单位、
         _this.drawDayChart(actualData, glData, dateDate, unit, glUnit);
-    },
+    },*/
 
     //绘制日发电趋势
-    drawDayChart: function (actualDataDay, glData, dateDate, punit, glUnit) {
+    /*drawDayChart: function (actualDataDay, glData, dateDate, punit, glUnit) {
       //glData = dealArray(glData);
       var option = {
         tooltip: {
@@ -295,7 +293,7 @@ new Vue({
       };
       var ptChartDay = echarts.init(document.getElementById('dayEchart'));
       ptChartDay.setOption(option);
-    },
+    },*/
     //检测登录状态
     isLogin: function () {
       var _this = this;
@@ -310,9 +308,9 @@ new Vue({
             window.sessionStorage.userid = res.user.userId;
             window.sessionStorage.username = res.user.username;
             window.sessionStorage.login = 1;
-            _this.getPsDetailInfo1(); //整体信息
+            /*_this.getPsDetailInfo1();*/ //整体信息
             _this.getDevrelation(); //获取厂房信息
-            _this.showGenTrends(); //加载日发电趋势
+            /*_this.showGenTrends();*/ //加载日发电趋势
 
           } else {
             //返回的是登录页面

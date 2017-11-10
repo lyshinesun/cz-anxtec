@@ -25,7 +25,39 @@
             <h3 v-text="fdStationName"></h3>
         </div>
 
-        <section class="tot_power_wrap mb20">
+        <section class="tot_power_wrap mb20" style="margin-bottom: -1.5rem;">
+            <div class="power_number">清扫机器人</div>
+            <h2>安轩科技<span class="power_unit"></span></h2>
+
+            <!-- <div class="power_number_wrap">
+                <div class="clearfix power_top_wrap">
+                    <div class="fl power_day_number">
+                        <span class="mb5 power_nums" v-text="powerAll"></span>
+                        <span class="power_title">当年发电量<i class="font24"> (万kWh)</i></span>
+                    </div>
+                    <div class="fr power_day_number">
+                        <span class="mb5 power_nums" v-text="powerDay"></span>
+                        <span class="power_title">当日发电量<i class="font24"> (万kWh)</i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tot_introduct_wrap clearfix">
+                <div class="introduct_item fl">
+                    <em v-text="fdStationCapacity+'MW'"></em>
+                    <span>电站容量</span>
+                </div>
+                <div class="introduct_item fl">
+                    <em v-text="pCount+'台'"></em>
+                    <span>清洗机器人</span>
+                </div>
+                <div class="introduct_item fl">
+                    <em v-text="sysCount+'台'"></em>
+                    <span>环境监测系统</span>
+                </div>
+            </div> -->
+        </section>
+        <!-- <section class="tot_power_wrap mb20">
             <div class="power_number" v-text="powerAll"></div>
             <h2>累计发电量<span class="power_unit">(万kWh)</span></h2>
 
@@ -56,15 +88,14 @@
                     <span>环境监测系统</span>
                 </div>
             </div>
-        </section>
-
-        <div id="power_schedule_chart" class="bg_white">
+        </section> -->
+        <!-- <div id="power_schedule_chart" class="bg_white">
             <div class="power_head clearfix">
                 <span class="head_ver_line"></span>
                 <h3>当日发电趋势</h3>
             </div>
             <div id="dayEchart" class="module bg_white"></div>
-        </div>
+        </div> -->
         <section class="station_introduct bg_white">
             <div class="power_head clearfix">
                 <span class="head_ver_line"></span>
@@ -72,7 +103,7 @@
             </div>
             <div class="station_desc">
                 <div class="img_des_main">
-                    <img :src="fdPicHttpAddr" alt=""/>
+                    <img src="../images/wd.png" alt=""/>
                 </div>
                 <div class="factory_title">详细列表</div>
                 <ul class="factory_ul">
@@ -86,7 +117,6 @@
                     </li>
                 </ul>
             </div>
-
         </section>
         <section class="bg_white">
             <div class="power_head clearfix">
@@ -95,16 +125,13 @@
             </div>
             <div class="station_desc">
                 <div class="img_des_main">
-                    <img :src="fdPicPhyAddr" alt=""/>
+                    <img src="../images/gm_(1).jpg" alt=""/>
                 </div>
-                <p class="station_int_text" v-text="fdStationDesc"></p>
+                <p class="station_int_text">河北省沧州市光伏发电建设项目</p>
             </div>
-
         </section>
-
     </div>
 </div>
-
 <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script src="../js/common/common.js"></script>
 <script src="../js/common/esmpbase.js"></script>

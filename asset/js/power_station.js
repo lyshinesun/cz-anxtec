@@ -9,31 +9,31 @@ new Vue({
     fd_total_scheduledata: '--', //累计计划完成率
 
     fd_all_power_unit: '',
-    fd_all_power_day_unit: ''
+    fd_all_power_day_unit: '',
+    listArr:[]
   },
   methods: {
-
     closeSetting: function() {
       $('#index_setting').hide();
     },
 
     //加载发电量排名
     loadFDLAll: function() {
-
+      var _this = this
       $.ajax({
-        url: vlm.serverAddr + 'stationbaseinfo/lists',
+        url: vlm.serverAddr + 'stationbaseinfo/listAx',
         type: 'get',
         dataType: 'json',
         traditional: true,
         success: function(res) {
           if (res.code == 0) {
-            var listArr = res.list;
-            console.log(listArr)
-            var listStr = $('#station_list_tpl').html();
+            _this.listArr = res.list;
+            console.log(_this.listArr)
+            /*var listStr = $('#station_list_tpl').html();
             var trHtml = ejs.render(listStr, {
               listArr: listArr
             });
-            $("#station_ul").html(trHtml);
+            $("#station_ul").html(trHtml);*/
             $('#preloader').hide();
           }
         },
